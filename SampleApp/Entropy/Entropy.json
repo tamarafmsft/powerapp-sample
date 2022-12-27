@@ -17,12 +17,16 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/27/2022 15:57:35",
+  "HeaderLastSavedDateTimeUTC": "12/27/2022 16:03:30",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
-  "LocalResourceFileNames": {},
-  "LocalResourceRootPaths": {},
+  "LocalResourceFileNames": {
+    "kermit": "07860189-38b8-4a82-9f10-5cce585bc01a.jpg"
+  },
+  "LocalResourceRootPaths": {
+    "kermit": "https://docserverpwaprodwus.blob.core.windows.net/72c1653a-3e22-41da-98aa-031f6c06b931-1/resource/744e78a4-3964-450f-92b4-a3ada8325148.jpg?sv=2017-04-17&sr=b&sig=ESCHJI5wz%2FF8npsKCgDKWea%2FJ2kRb1jB2tqx70P3oxQ%3D&spr=https&se=2022-12-28T16%3A17%3A45Z&sp=r"
+  },
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
@@ -32,27 +36,28 @@
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "circle": 2,
-    "gallery": 1,
-    "icon": 4,
-    "image": 3,
+    "circle": 4,
+    "gallery": 3,
+    "icon": 2,
+    "image": 1,
     "label": 0
   },
   "PublishOrderIndices": {
     "App": 0,
-    "Circle1": 0,
-    "galleryTemplate1": 0,
-    "iconNext1": 0,
-    "iconPrev1": 0,
+    "Circle1": 7,
+    "galleryTemplate1": 6,
+    "iconNext1": 4,
+    "iconPrev1": 3,
     "Label1": 0,
-    "LabelSkip1": 0,
+    "LabelSkip1": 8,
     "Screen1": 0,
     "Screen2": 0,
-    "TutorialImage1": 0,
-    "TutorialNavigator1": 0,
-    "TutorialText1": 0
+    "TutorialImage1": 1,
+    "TutorialNavigator1": 5,
+    "TutorialText1": 2
   },
   "ResourcesJsonIndices": {
+    "Image-kermit": 1,
     "Image-SampleImage": 0
   },
   "RuleScreenIdWithoutScreen": {},
