@@ -1,0 +1,12 @@
+Screen1 As screen:
+
+    Label1 As label:
+        Fill: =RGBA(187, 221, 140, 1)
+        Height: =70
+        Size: =21
+        Text: ="HELLO WORLD"
+        Width: =560
+        X: =80
+        Y: =39
+        ZIndex: =1
+
