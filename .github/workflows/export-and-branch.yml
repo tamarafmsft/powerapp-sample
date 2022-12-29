@@ -22,13 +22,13 @@ jobs:
         user-name: 'admin@mngenvmcap904374.onmicrosoft.com'
         password-secret: 'USS47DCTdC'
         solution-name: github-sample-app
-        solution-output-file: 'github-sample-app-with-github-actions.zip'
+        solution-output-file: 'github-sample-app.zip'
         working-directory: 'out'
 
     - name: Unpack Solution
       uses: microsoft/powerplatform-actions/unpack-solution@v0
       with:
-        solution-file: 'out/github-sample-app-with-github-actions.zip'
+        solution-file: 'out/github-sample-app1.zip'
         solution-folder: 'out/solutions/solution one'
         solution-type: 'Unmanaged'
         overwrite-files: true
@@ -44,5 +44,5 @@ jobs:
       uses: microsoft/powerplatform-actions/branch-solution@v0
       with:
         solution-folder: 'out/solutions/solution one'
-        solution-target-folder: 'src/solutions/solution1'
+        solution-target-folder: 'src/solutions/github-sample-app1'
         token: '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'
