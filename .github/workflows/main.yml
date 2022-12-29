@@ -10,19 +10,39 @@ on:
     branches: [ main ]
 
 jobs:
-  export-from-dev:
-    runs-on: windows-latest
-    env:
-      RUNNER_DEBUG: 1
+  build:
+
+    runs-on: windows-latest   # alternate runner OS is: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Export Solution
+      uses: microsoft/powerplatform-actions/export-solution@v0
       with:
-        lfs: true
+        environment-url: 'orgb0850877.crm.dynamics.com'
+        user-name: 'admin@mngenvmcap904374.onmicrosoft.com'
+        password-secret: 'USS47DCTdC'
+        solution-name: github-sample-app
+        solution-output-file: 'github-sample-app-with-github-actions.zip'
+        working-directory: 'out'
 
-    - name: who-am-i action
-      uses: microsoft/powerplatform-actions/who-am-i@v0
+    - name: Unpack Solution
+      uses: microsoft/powerplatform-actions/unpack-solution@v0
       with:
-        environment-url: ${{secrets.POWERAPP_CREDENTIALS}}
-        user-name: ${{secrets.POWERAPP_CREDENTIALS}}
-        password-secret: ${{secrets.POWERAPP_CREDENTIALS}}
+        solution-file: 'out/github-sample-app-with-github-actions.zip'
+        solution-folder: 'out/solutions/solution one'
+        solution-type: 'Unmanaged'
+        overwrite-files: true
+
+    - name: Publish Solution
+      uses: microsoft/powerplatform-actions/publish-solution@v0
+      with:
+        environment-url: 'orgb0850877.crm.dynamics.com'
+        user-name: 'admin@mngenvmcap904374.onmicrosoft.com'
+        password-secret: 'USS47DCTdC
+
+    - name: Prepare solution changes for check-in into source control
+      uses: microsoft/powerplatform-actions/branch-solution@v0
+      with:
+        solution-folder: 'out/solutions/solution one'
+        solution-target-folder: 'src/solutions/solution1'
+        token: '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'
